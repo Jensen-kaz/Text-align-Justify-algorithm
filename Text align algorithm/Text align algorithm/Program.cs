@@ -3,12 +3,54 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Text_align_algorithm
 {
     class Program
     {
         static void Main(string[] args)
+        {
+            int flag;
+            int len; // justify: width
+            Console.Write("WARNING!!! Text align width must be > 20. If you enter value less 20, correct execution of algorithm, not guaranteed." + "\n\n\n");
+
+
+            Console.Write("Enter text align width ");
+            len = int.Parse(Console.ReadLine());
+            Console.Write("\n\n");
+
+
+            Console.Write("Select algorithm parameters: "+"\n");
+            Console.WriteLine("Enter the number 1: mode - read array - console output");
+            Console.WriteLine("Enter the number 2: mode - enter the text - console output");
+            Console.WriteLine("Enter the number 3: mode - read the file (text.txt) - write to file (textRelease.txt)");
+            Console.WriteLine("Enter parameter: " + "\t");
+
+           
+
+            
+
+            switch ( flag= int.Parse(Console.ReadLine()))
+            {
+                case 1:
+                    AlignJustify(len);
+                    break;
+                case 2:
+                    AlignJustifyEnterText(len);
+                    break;
+
+                case 3:
+                    AlignJustifyReadFile(len);
+                    break;
+            }
+            
+
+            
+            Console.Read();
+        }
+
+        static void AlignJustify(int len)
         {
             string str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                             "Vestibulum sagittis dolor mauris, at elementum ligula tempor " +
@@ -23,16 +65,71 @@ namespace Text_align_algorithm
                             "enim. Aliquam eleifend tempus dapibus. Pellentesque commodo, " +
                             "nisi sit amet hendrerit fringilla, ante odio porta lacus, ut elementum justo nulla et dolor.";
 
-            int len = 30;   // justify: width
+
+              
 
             string h;
             h = Justify(str, len);
 
+            Console.Write("\n\n");
+
+            Console.Write("Parameter 1; text align width = " + len + ".\n\n");
             Console.Write(h);
-            Console.Read();
         }
 
-        static public string Justify(string str, int len)
+
+        static void AlignJustifyEnterText(int len)
+        {
+            Console.Write("\n\n");
+            Console.Write("Enter text ");
+            string str=Console.ReadLine();
+
+
+
+
+            string h;
+            h = Justify(str, len);
+
+            Console.Write("\n\n");
+
+            Console.Write("Parameter 2; text align width = " + len + ".\n\n");
+            Console.Write(h);
+        }
+
+
+
+        static void AlignJustifyReadFile(int len)
+        {
+            Console.Write("\n\n");
+            string str;
+
+            using (StreamReader sr = new StreamReader("text.txt"))
+            {
+                str = sr.ReadToEnd();
+            }
+
+                
+
+
+
+
+            string h;
+            h = Justify(str, len);
+
+            using (StreamWriter wr = new StreamWriter("textRelease.txt", false, System.Text.Encoding.Default))
+            {
+                wr.Write(h);
+            }
+
+                Console.Write("\n\n");
+
+            Console.Write("Parameter 3; text align width = " + len + ". File written.");
+           
+        }
+
+
+
+        static string Justify(string str, int len)
         {
             int i = 0;   // i- index word in array
             bool whileSwitch; // switch for while cycle

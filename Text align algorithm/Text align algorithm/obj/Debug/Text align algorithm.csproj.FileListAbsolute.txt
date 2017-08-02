@@ -3,3 +3,9 @@ F:\Develop\visual studio projects\C#\Text align justify\Text align algorithm\Tex
 F:\Develop\visual studio projects\C#\Text align justify\Text align algorithm\Text align algorithm\bin\Debug\Text align algorithm.pdb
 F:\Develop\visual studio projects\C#\Text align justify\Text align algorithm\Text align algorithm\obj\Debug\Text align algorithm.exe
 F:\Develop\visual studio projects\C#\Text align justify\Text align algorithm\Text align algorithm\obj\Debug\Text align algorithm.pdb
+F:\Develop\GitRepositories\Text align justify\Text align algorithm\Text align algorithm\bin\Debug\Text align algorithm.exe.config
+F:\Develop\GitRepositories\Text align justify\Text align algorithm\Text align algorithm\bin\Debug\Text align algorithm.exe
+F:\Develop\GitRepositories\Text align justify\Text align algorithm\Text align algorithm\bin\Debug\Text align algorithm.pdb
+F:\Develop\GitRepositories\Text align justify\Text align algorithm\Text align algorithm\obj\Debug\Text align algorithm.csprojResolveAssemblyReference.cache
+F:\Develop\GitRepositories\Text align justify\Text align algorithm\Text align algorithm\obj\Debug\Text align algorithm.exe
+F:\Develop\GitRepositories\Text align justify\Text align algorithm\Text align algorithm\obj\Debug\Text align algorithm.pdb
